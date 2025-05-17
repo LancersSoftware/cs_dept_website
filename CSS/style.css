@@ -11,13 +11,21 @@ header {
   padding: 10px 0;
   text-align: center;
 }
-
+nav{
+  background-color: #003366;
+  color: white;
+  padding: 10px 0;
+  align-items: center;
+}
 nav a {
   color: white;
   margin: 0 15px;
+  font-size: 1.5rem;
   text-decoration: none;
 }
-
+nav a:hover{
+  color: blanchedalmond;
+}
 main {
   padding: 20px;
   background-color: white;
