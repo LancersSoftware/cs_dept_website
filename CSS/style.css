@@ -14,6 +14,7 @@ header {
   text-align: center;
 }
 
+/*Navbar*/
 nav {
   background-color: #003366;
   padding: 10px 0;
@@ -31,18 +32,67 @@ nav a:hover {
   color: blanchedalmond;
 }
 
+/* Dropdown container */
+.dropdown {
+  display: inline-block;
+  position: relative;
+}
+
+/* Style for dropdown button */
+.dropbtn {
+  background-color: #003366;
+  color: white;
+  padding: 10px 15px;
+  font-size: 1.2rem;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #ffffff;
+  min-width: 180px;
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside dropdown */
+.dropdown-content a {
+  color: #003366;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  font-size: 1rem;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #002244;
+}
+
 main {
   padding: 20px;
   background-color: white;
 }
-
+/*banner*/
 .banner img {
   width: 100%;
   height: auto;
   display: block;
   margin-bottom: 20px;
 }
-
+/*news section*/
 .news {
   padding: 10px;
   background-color: #eef1f5;
