@@ -1,102 +1,116 @@
-
+html {
+  scroll-behavior: smooth;
+}
 
 body {
-  font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f4f4f4;
+  font-family: Arial, sans-serif;
+  background: #f4f4f4;
 }
+
 
 header {
-  background-color: #003366;
-  color: white;
-  padding: 10px 0;
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  background: #003366;
+  color: #fff;
   text-align: center;
+  padding: 10px 0;
+  z-index: 1000;
 }
 
-/*Navbar*/
+main {
+  padding-top: 140px; 
+  background: #fff;
+}
+
+/* Navbar */
 nav {
-  background-color: #003366;
-  padding: 10px 0;
-  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background: #003366;
+  padding: 8px 0;
 }
-
-nav a {
-  color: white;
-  margin: 0 15px;
-  font-size: 1.2rem;
+h1 a{
+  color: #fff;
   text-decoration: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+h1 a:hover{
+  color: blanchedalmond;
+}
+nav a,
+nav .dropbtn {
+  color: #fff;
+  margin: 0 12px;
+  font-size: 1.1rem;
+  text-decoration: none;
+  background: none;
+  border: none;
+  cursor: pointer;
 }
 
-nav a:hover {
+nav a.external-link {
+  font-weight: bold;
+}
+
+nav a:hover,
+nav .dropbtn:hover {
   color: blanchedalmond;
 }
 
-/* Dropdown container */
+
 .dropdown {
-  display: inline-block;
   position: relative;
+  display: inline-block;
 }
 
-/* Style for dropdown button */
-.dropbtn {
-  background-color: #003366;
-  color: white;
-  padding: 10px 15px;
-  font-size: 1.2rem;
-  border: none;
-  cursor: pointer;
-  text-decoration: none;
-}
-
-/* Dropdown content (hidden by default) */
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: #ffffff;
-  min-width: 180px;
-  box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
-  z-index: 1;
+  background: #fff;
+  min-width: 160px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  z-index: 1001;
 }
 
-/* Links inside dropdown */
 .dropdown-content a {
-  color: #c5d7e9;
-  padding: 12px 16px;
-  text-decoration: none;
   display: block;
+  padding: 10px 14px;
+  color: #003366;
+  text-decoration: none;
   font-size: 1rem;
 }
 
 .dropdown-content a:hover {
-  background-color: #f1f1f1;
+  background: #4f5257;
 }
 
-/* Show dropdown on hover */
-.dropdown:hover .dropdown-content {
+.dropdown:hover .dropdown-content,
+.dropdown:focus-within .dropdown-content {
   display: block;
 }
 
-.dropdown:hover .dropbtn {
-  background-color: #002244;
-}
 
-main {
-  padding: 20px;
-  background-color: white;
-}
-/*banner*/
+
 .banner img {
   width: 100%;
   height: auto;
   display: block;
-  margin-bottom: 20px;
 }
-/*news section*/
+
+
 .news {
-  padding: 10px;
-  background-color: #eef1f5;
-  border-radius: 5px;
+  margin: 20px auto;
+  max-width: 90%;
+  padding: 15px;
+  background: #eef1f5;
+  border-radius: 4px;
 }
 
 .news h2 {
@@ -104,24 +118,93 @@ main {
 }
 
 .news-item {
-  margin-bottom: 15px;
-  padding: 10px;
-  background-color: white;
+  background: #fff;
+  margin: 12px 0;
+  padding: 12px;
   border-left: 5px solid #003366;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
 }
 
 .news-item h3 {
-  margin: 0;
+  margin: 0 0 6px;
   color: #003366;
 }
 
+
+.content-section {
+  max-width: 90%;
+  margin: 0 auto 40px;
+  padding: 30px 20px;
+  border-bottom: 1px solid #ddd;
+}
+
+.content-section h2 {
+  margin-top: 0;
+  color: #003366;
+}
+
+
 footer {
-  background-color: #003366;
-  color: white;
+  background: #003366;
+  color: #fff;
   text-align: center;
-  padding: 10px 0;
-  position: fixed;
-  width: 100%;
-  bottom: 0;
+  padding: 12px 0;
+}
+
+/* === Responsive Navigation === */
+.nav-toggle {
+  display: none;
+  font-size: 1.5rem;
+  color: white;
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-left: 20px;
+  margin-right: auto;
+}
+
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background: #003366;
+  }
+
+  .nav-links a,
+  .nav-links .dropbtn {
+    padding: 10px 15px;
+    width: 100%;
+    text-align: left;
+    margin: 0;
+  }
+
+  .dropdown-content {
+    position: static;
+    box-shadow: none;
+    background: #003366;
+  }
+
+  .dropdown-content a {
+    color: white;
+    background: #004080;
+  }
+
+  .dropdown-content a:hover {
+    background: #005599;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .nav-toggle {
+    display: block;
+  }
 }

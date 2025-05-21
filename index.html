@@ -1,54 +1,84 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Department of Computer Science</title>
-    <link rel="stylesheet" href="/CSS/style.css">
-    <link rel="icon" href="/images/logo.webp">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Department of Computer Science</title>
+  <link rel="stylesheet" href="/CSS/style.css">
+  <link rel="icon" href="/images/logo.webp">
 </head>
 <body>
-    <header>
-        <h1>Welcome to the Department of Computer Science</h1>
-        <nav>
-    <a href="https://www.rkmvccrahara.org/">R.K.M.V.C.C. Rahara</a>
-    <a href="index.html">Home</a>
 
-    <div class="dropdown">
-      <button class="dropbtn">About</button>
-      <div class="dropdown-content">
-        <a href="department.html"> Department</a>
-        <a href="faculty.html"> Faculties</a>
+  <header>
+    <h1>Welcome to the Department of Computer Science <a href="https://www.rkmvccrahara.org/" class="external-link">R.K.M.V.C.C. Rahara</a></h1>
+    <nav>
+      <button class="nav-toggle" onclick="toggleMenu()">Menu </button>
+      <div class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#news">News</a>
+        <div class="dropdown">
+          <button class="dropbtn">About</button>
+          <div class="dropdown-content">
+            <a href="#department">Department</a>
+            <a href="#faculty">Faculties</a>
+          </div>
+        </div>
+        <a href="#academics">Academics</a>
+        <a href="#students">Students</a>
+        <a href="#contact">Contact</a>
       </div>
-    </div>
+    </nav>
 
-   <a href="academics.html">Academics</a>
-   <a href="students.html">Students</a>
-   <a href="contact.php">Contact</a>
-</nav>
+  </header>
 
-    </header>
+  <main>
+    <section id="home" class="banner">
+      <img src="/images/banner.jpg" alt="Department Banner">
+    </section>
 
-    <main>
-        <section class="banner">
-            <img src="/images/banner.jpg" alt="Department Banner">
-        </section>
+    <section id="news" class="news">
+      <h2>Latest News</h2>
+      <div class="news-item">
+        <h3>Example news</h3>
+        <p>Example content</p>
+      </div>
+      <div class="news-item">
+        <h3>Example workshop</h3>
+        <p>The content</p>
+      </div>
+    </section>
 
-        <section class="news">
-            <h2>Latest News</h2>
-            <div class="news-item">
-                <h3>Example news</h3>
-                <p>Example content</p>
-            </div>
-            <div class="news-item">
-                <h3>example workshop</h3>
-                <p>the content</p>
-            </div>
-        </section>
-    </main>
+    <section id="department" class="content-section">
+      <h2>About the Department</h2>
+      <p><!-- department.html content here --></p>
+    </section>
 
-    <footer>
-        <p>&copy; 2025 Department of Computer Science, RKMVCC Rahara</p>
-    </footer>
+    <section id="faculty" class="content-section">
+      <h2>Our Faculty</h2>
+      <p><!-- faculty.html content here --></p>
+    </section>
+
+    <section id="academics" class="content-section">
+      <h2>Academics</h2>
+      <p><!-- academics.html content here --></p>
+    </section>
+
+    <section id="students" class="content-section">
+      <h2>Students</h2>
+      <p><!-- students.html content here --></p>
+    </section>
+
+    <section id="contact" class="content-section">
+      <h2>Contact Us</h2>
+      <p><!-- contact.php / form here --></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Department of Computer Science, RKMVCC Rahara</p>
+  </footer>
+
+  <script src="/JS/scrolling.js"></script>
 </body>
 </html>
