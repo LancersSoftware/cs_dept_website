@@ -192,7 +192,7 @@ footer {
     display: none;
     flex-direction: column;
     width: 100%;
-    background: #003366;
+    background: #757070;
   }
 
   .nav-links a,
@@ -206,16 +206,17 @@ footer {
   .dropdown-content {
     position: static;
     box-shadow: none;
-    background: #003366;
+    background: #757070;
   }
 
   .dropdown-content a {
     color: white;
-    background: #004080;
+    background: #757070;
   }
 
   .dropdown-content a:hover {
-    background: #005599;
+    color: #000000;
+    background: #f1f9ff;
   }
 
   .nav-links.show {
